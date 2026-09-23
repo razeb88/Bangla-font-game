@@ -28,7 +28,9 @@ class GameScreen extends StatefulWidget {
   State<GameScreen> createState() => _GameScreenState();
 }
 
-class _GameScreenState extends State<GameScreen>
+colorScheme: ColorScheme.fromSeed(
+  seedColor: Colors.deepPurple,
+),
     with SingleTickerProviderStateMixin {
   final letters = const ['অ','আ','ই','ঈ','উ','ঊ','ঋ','এ','ঐ','ও'];
   final rng = Random();
@@ -173,7 +175,7 @@ class _GameScreenState extends State<GameScreen>
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('⭐ $score', style: const TextStyle(fontSize: 19)),
                   Text('❤️ $lives', style: const TextStyle(fontSize: 19)),
